@@ -1,0 +1,25 @@
+Escriba un algoritmo que acepte un número entero mayor a 100 y menor a 1000, y muestre como está compuesto (unidades, decenas y centenas) y si es múltiplo de 3 (Recordar: todo número cuya suma de sus dígitos sea múltiplo de 3, lo es también).
+
+Accion Digitos es
+	Ambiente
+		numero, unidad, decena, centena, aux : entero
+
+	Proceso
+		Esc("Ingrese un número mayor a 100 y menor a 1000"); leer(numero);
+
+		Mientras numero < 100 O numero > 1000 hacer
+			Esc("El número ingresado no es correcto, ingreselo nuevamente"); Leer(numero);
+		FinMientras
+
+		centena := Truncar(numero /100);
+		aux := numero - centena * 100;
+		decena := Truncar(aux /10);
+		unidad := aux - decena * 10;
+		aux := unidad + decena + centena;
+
+		si aux MOD 3 = 0 entonces:
+			esc("El numero es múltiplo de 3");
+		sino
+			esc("el numero no es multiplo de 3");
+		finsi
+finaccion

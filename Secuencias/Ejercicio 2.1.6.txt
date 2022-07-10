@@ -1,0 +1,28 @@
+Dada una secuencia de enteros que almacena la cantidad de habitantes de las ciudades capitales de las 23 provincias de la República Argentina, discriminados 4 categorías: menores de 18 años (varones y mujeres) y mayores de 18 años (varones y mujeres). Se pide determinar la población total y los siguientes porcentajes: masculinos, femeninos, mayores de 18 y menores de 18.
+
+Accion Ciudades Es
+	Ambiente
+		Sec : Secuencia de Enteros
+		V, C, VarMen, MujMen, VarMay, MujMay : Enteros
+		1, 2, 3, 4 : Enteros
+
+	Proceso
+		Arr(Sec); 
+		// Consideraremos que siguen el orden indicado y que la secuencia está completa
+		Mientras NFDS Hacer
+			AVZ(Sec, V);
+			VarMen := VarMen+V;
+			AVZ(Sec, V);
+			MujMen := MujMen +V;
+			AVZ(Sec, V);
+			VarMay := VarMay + V;
+			AVZ(Sec, V);
+			MujMay := MujMay + V;
+		FinMientras
+		C := VarMen + MujMen + VarMay + MujMay;
+		1 := (VarMen * 100) DIV C;
+		2 := (MujMen * 100) DIV C;
+		3 := (VarMay * 100) DIV C;
+		4 := (MujMay * 100) DIV C;
+
+FinAccion

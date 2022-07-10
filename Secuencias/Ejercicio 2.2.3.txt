@@ -1,0 +1,22 @@
+Escribir un algoritmo que permita desglosar una secuencia de enteros que contiene monotonías crecientes (series de elementos consecutivos ordenados crecientemente; cada serie está constituida por un elemento como mínimo), en dos secuencias de salida, de tal modo que tales monotonías sean copiadas alternativamente en una de las secuencias resultado o en otra.
+
+Accion Monotonia ES
+	Ambiente
+		Sec, sal1, sal2 : secuencia de enteros;
+		v, aux : entero;
+
+	Proceso
+		Arr(Sec); Crear(sal1); Crear(sal2); Avz(Sec, v);
+		Esc(sal1, v);
+		Mientras NFDSec hacer
+			aux := v;
+			Avz(Sec,v);
+			Si v > aux entonces
+				Esc(sal1, v);
+			Sino
+				Esc(sal2, v);
+			FinSI
+		FinMientras
+		Cerrar(sal1); Cerrar(sal2);
+		Arr(sal1); Arr(sal2);
+		Mientras NFDSal hacer

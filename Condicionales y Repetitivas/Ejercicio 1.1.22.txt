@@ -1,0 +1,18 @@
+Escriba un algoritmo que determine si un número es primo
+
+Accion Primo es
+	Ambiente
+		i, num, cont : entero
+	Proceso
+		cont := 0;
+		Esc("Ingrese el numero que desea calcular si es primo");
+		Leer(num);
+		Para i:= 2 hasta num-1 hacer
+			Si num MOD i = 0 entonces
+				cont := cont + 1;
+			finSi
+		FinPara
+		Si cont = 0 entonces
+			Esc("El número es primo");
+		finSi
+FinAccion

@@ -1,0 +1,70 @@
+Diseñe un algoritmo que muestre un menú con las opciones sumar, restar, multiplicar y dividir, el algoritmo solicitará una opción y realizará la tarea elegida, se debe usar un procedimiento para mostrar el menú, pedir los datos en el algoritmo principal y después usar funciones para realizar los cálculos.
+
+Accion Calculdora Es
+	Ambiente
+		Opcion : Entero
+
+		Procedimiento Menu():
+			Esc("ESTA ES LA CALCULADORA FACHERA");
+			Esc("Ingrese la opción para operar");
+			Esc("1- Sumar");
+			Esc("2- Restar");
+			Esc("3- Multiplicar");
+			Esc("4- Dividir");
+		FinProcedimiento
+
+		Funcion Sumar(): real
+			Ambiente
+				A, B : reales
+
+			Proceso
+				Esc("Ingrese el primer valor"); Leer(A);
+				Esc("Ingrese el segundo valor"); Leer(B);
+
+				Sumar := A + B;
+		FinFuncion
+
+		Funcion Restar(): real
+			Ambiente
+				A, B : reales
+
+			Proceso
+				Esc("Ingrese el primer valor"); Leer(A);
+				Esc("Ingrese el segundo valor"); Leer(B);
+
+				Restar := A-B;
+		FinFuncion
+
+		Funcion Multiplicar(): real
+			Ambiente
+				A, B : reales
+
+			Proceso
+				Esc("Ingrese el primer valor"); Leer(A);
+				Esc("Ingrese el segundo valor"); Leer(B);
+
+				Multiplicar:= A*B;
+		FinFuncion
+
+		Funcion Dividir(): real
+			Ambiente
+				A, B : reales
+
+			Proceso
+				Esc("Ingrese el primer valor"); Leer(A);
+				Esc("Ingrese el segundo valor"); Leer(B);
+
+				Dividir := A/B
+		FinFuncion
+
+	Proceso
+		Menu();
+		Leer(Opcion);
+
+		Segun Opcion Hacer
+			1: Sumar();
+			2: Restar();
+			3: Multiplicar();
+			4: Dividir();
+		FinSegun
+FinAccion

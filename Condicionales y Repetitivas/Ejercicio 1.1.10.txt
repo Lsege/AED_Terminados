@@ -1,0 +1,16 @@
+Dados dos números enteros A y B generar un algoritmo que permita determinar si A es divisor de B o B es divisor de A.
+
+Accion Divisores Es
+	Ambiente
+		A, B : Reales
+
+	Proceso
+		Esc("Ingrese los valores"); Leer(A); Leer(B);
+
+		Si A MOD B = 0 entonces
+			Esc("A es divisor de B");
+		FinSI
+
+		Si B MOD A = 0 entonces
+			Esc("B es divisor de A");
+		FinSI

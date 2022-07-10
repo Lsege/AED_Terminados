@@ -1,0 +1,14 @@
+Realice una función que dado un número devuelva su cuadrado.
+
+Accion Fcuadrado ES
+	Ambiente
+		numero, resultado : entero;
+
+		FUNCION Cuadrado(numero : entero) : entero
+			Cuadrado := numero **2
+		FinFuncion
+
+	Proceso
+		Esc("Ingrese el número"); Leer(numero);
+		resultado := Cuadrado(numero);
+		Esc(resultado);

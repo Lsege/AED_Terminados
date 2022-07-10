@@ -1,0 +1,20 @@
+Accion precio es
+	Ambiente
+		Precio_actual, PrecioF : Real
+		AnioF, AnioA : Entero
+		Inflacion = 0.4
+		
+		PrecioFinal(PA, I: Real , AA, AF : Entero) Real
+			PrecioFinal := (PA * (1 + I) ** (AF - AA))
+		Fin_proceso
+
+	Proceso
+		Escribir("Ingrese el precio actual del producto")
+		Leer(Precio_actual)
+		Escribir("Ingrese el año actual")
+		Leer(AnioA)
+		Escribir("Ingrese el año futuro en el cual desea calcular")
+		Leer(AnioF)
+		PrecioF := PrecioFinal(Precio_actual, Inflacion, AnioA, AnioF)
+
+FinAccion

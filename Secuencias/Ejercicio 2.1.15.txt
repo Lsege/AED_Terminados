@@ -1,0 +1,25 @@
+Se desea saber la cantidad promedio de palabras que contienen las oraciones de una secuencia de caracteres. Supóngase que los puntos son siempre contiguos al último caracter de la palabra. La secuencia finaliza con una marca.
+
+Accion Palabras ES
+	Ambiente	
+		Sec : Secuencia de caracteres
+		v : Caracter
+		cpal, cora : Entero
+		Abecedario = ("A", ... "Z", "a", ..., "z");
+	Proceso
+		Arr(Sec);
+
+		Mientras NFDS Hacer
+			Avz(Sec, v);
+			Mientras v en Abecedario hacer
+				Avz(Sec, v);
+			FinMientras
+			Si v = " " entonces
+				cpal := cpal+1;
+				Avz(Sec,v);
+			FinSI
+			Si v = "." entonces
+				cpal := cpal+1;
+				cora := cora +1;
+				Avz(Sec,v); Avz(Sec,v);
+			FinSi

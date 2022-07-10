@@ -1,0 +1,48 @@
+Escriba un algoritmo que permita ingresar 3 valores numéricos y determine cuál es el mayor, el medio y el menor. (era el 3 de los complementarios)
+
+
+Accion Orden es
+	Ambiente
+		a, b, c : reales;
+
+		procedimiento iguales(a, b, c, reales):
+			Si a=b y a=c entonces
+				Esc("Los tres números son iguales");
+			finSi
+		finProcedimiento
+
+	Proceso
+		Esc("Ingrese el primer valor");
+		Leer(a);
+		Esc("Ingrese el segundo valor");
+		Leer(b);
+		Esc("Ingrese el tercer valor");
+		Leer(c);
+
+		Si a > b y a > c entonces: 
+			Si b > c entonces:
+				Esc("El orden de los valores es ", a,b,c);
+			Sino
+				Esc("El orden de los valores es ", a,c,b);
+			finSi
+		Sino
+			Si b > a y b > c entonces:
+				Si a > c entonces:
+					Esc("El orden de los valores es ", b,a,c);
+				Sino
+					Esc("El orden de los valores es ", b,c,a);
+				finSi
+			Sino
+				Si a>b entonces:
+					Esc("El orden de los valores es ", c,a,b);
+				Sino
+					Si b>a entonces:
+						Esc("El orden de los valores es ", c,b,a)
+					Sino
+						Esc("Los tres valores son iguales");
+					FinSi
+				FinSI
+			FinSi
+		FinSi
+
+FinAccion.

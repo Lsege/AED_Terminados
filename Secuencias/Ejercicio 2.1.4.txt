@@ -1,0 +1,15 @@
+Se dispone de una secuencia de números de socios, y se desea saber la cantidad de socios que están registrados.
+
+Accion Socios Es
+	Ambiente
+		Sec : Secuencia de Enteros
+		V, C : Entero
+
+	Proceso
+		C := 0;
+		ARR(Sec); AVZ(Sec, V);
+		Mientras NDFS Hacer
+			C := C+1;
+			AVZ(Sec,V);
+		FinMIentras
+FinAccion

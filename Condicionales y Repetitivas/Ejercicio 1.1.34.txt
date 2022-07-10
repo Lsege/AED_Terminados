@@ -1,0 +1,13 @@
+Escribir un algoritmo que permita imprimir la siguiente sucesión. Considere que N es un número par, que se ingresa.
+
+Accion Pares es
+	Ambiente
+		N, I : Reales
+
+	Proceso
+		Esc("Ingrese el número que desea imprimir la sucesión");
+		Leer(N);
+		Para I:= 2 Hasta N; 2 Hacer
+			Esc(I);
+		FinPara
+FinAccion

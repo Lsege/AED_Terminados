@@ -1,0 +1,20 @@
+Realizar un programa que lea dos números complejos
+(a,b) y (c, d) luego calcule su producto.
+
+Accion Complejos es
+	Ambiente
+		a, b, c, d : Reales;
+		ra, rb := real;
+	Proceso
+		Esc("Ingrese el primer elemento del primer número complejo");
+		leer(a);
+		Esc("Ingrese el segundo elemento del primer número complejo");
+		leer(b);
+		Esc("Ingrese el primer elemento del segundo número complejo");
+		leer(c);
+		Esc("Ingrese el segundo elemento del segundo número complejo");
+		leer(d);
+		ra := (a*c)-(d*b);
+		rb := (a*d)+(b*c);
+		Esc("El número complejo resultante es (", ra, ") , (", rb, ")");
+finAccion

@@ -1,0 +1,28 @@
+Dada una secuencia de caracteres de entrada, desarrollar un algoritmo que produzca 2 secuencias de salida, una con los caracteres "numéricos" y otra con los que no lo son.
+
+Informar al final, cantidad de caracteres de cada secuencia de salida
+
+Ejemplo: Si en la secuencia de entrada viniera A125EB% en la salida debería ir
+
+salida1 --> 125
+
+salida2 --> AEB%
+
+Accion Diferencia ES
+	Ambiente
+		Sec, sal1, sal2: secuencia de caracteres;
+		v : Caracter
+		num : ("1","2","3","4","5","6","7","8","9");
+
+	Proceso
+		Arr(Sec); Crear(Sal1); Crear(Sal2); Avz(Sec,v);
+		Mientras NFDS hacer
+			Si v en num entonces
+				Esc(sal1, v);
+			Sino
+				Esc(sal2,v);
+			FinSi
+			Avz(Sec,v);
+		FinMientras
+		Cerrar(Sec); Cerrar(sal1); Cerrar(sal2);
+FinAccion

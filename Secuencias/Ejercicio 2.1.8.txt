@@ -1,0 +1,33 @@
+Teniendo en cuenta el ejercicio anterior, se solicita que la secuencia de salida sea una secuencia de caracteres y los CUIT se separen unos de otros con el caracter "-".
+
+Accion Cuit2 Es
+	Ambiente
+		Sec : Secuencia de enteros;
+		SecSal : Secuencia de Caracteres;
+		V, Aux : Entero
+
+	Proceso
+		Arr(Sec); Crear(SecSal);
+		Mientras NFDS Hacer
+			Avz(Sec, V); Aux := V;
+			Para i := 10 hasta i =1; i:= i-1 Hacer
+				aux2 := Aux DIV(1*10^i);
+				Segun aux2 Hacer
+					0 : Esc(SecSal, "0");
+					1 : Esc(SecSal, "1");
+					2 : Esc(SecSal, "2");
+					3 : Esc(SecSal, "3");
+					4 : Esc(SecSal, "4");
+					5 : Esc(SecSal, "5");
+					6 : Esc(SecSal, "6");
+					7 : Esc(SecSal, "7");
+					8 : Esc(SecSal, "8");
+					9 : Esc(SecSal, "9");
+				FinSegun
+				Aux := Aux - Aux2;
+			FinPara
+			Esc(SecSal, "-");
+		FinMientras
+FinAccion
+
+				

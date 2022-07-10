@@ -1,0 +1,32 @@
+Escribir una función que lea desde el teclado las unidades y el precio que quiere comprar, y en función de las unidades introducidas le haga un descuento o no (cuando las unidades excedan media docena se aplicará 4% y el 10% cuando excedan la docena).
+
+Accion Pago ES
+	Ambiente
+		Bandera : caracter;
+
+		Funcion Descuentos (): real
+			Ambiente
+				precio, unidades, total : real
+
+			Proceso
+				Esc("Ingrese el precio del producto"); Leer(precio);
+				Esc("Ingrese las unidades"); Leer(unidades);
+				
+				Si unidades < 6 entonces:
+					total := precio;
+				Sino
+					Si unidades > 6 y unidades < 12 entonces
+						total := precio - precio * 0.04;
+					Sino
+						total := precio - precio * 0.10;
+					FinSi
+				FinSI
+		FinFuncion
+
+	Proceso
+		Bandera := "A";
+		Mientras Bandera = "A" Hacer
+			Descuentos();
+			Esc("Si desea seguir agregando productos presione A, de lo contrario presione B");
+			Leer(Bandera);
+		FinMientras

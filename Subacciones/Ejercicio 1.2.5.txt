@@ -1,0 +1,22 @@
+Escribir una función que verifique si un caracter introducido es un dígito o no.
+
+Accion Digito ES
+	Ambiente
+		valor := caracter;
+
+		Procedimiento EsDigito(valor: caracter):
+			Ambiente
+				conjunto = {"0","1","2","3","4","5","6","7","8","9"};
+			Proceso
+				SI valor en conjunto entonces:
+					Esc("El caracter es un dígito");
+				Sino
+					Esc("El caracter no es un dígito");
+				FinSI
+		FinProcedimiento
+	Proceso
+		Esc("Ingrese un caracter y le diré si es un dígito");
+		Leer(valor);
+		EsDigito(valor);
+
+FinAccion

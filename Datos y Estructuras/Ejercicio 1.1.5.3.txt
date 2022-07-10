@@ -1,0 +1,18 @@
+Se desea comprar una PC y una impresora. Calcular el precio total: el cual está dado por la suma de los precios de costos, los porcentajes de ganancia del vendedor y un 21% de IVA. Supóngase una ganancia del vendedor del 12% por la PC y 7% por la impresora. Se leen los costos y se imprimen el precio total de ventas.
+
+Accion total es
+	Ambiente
+		PC, Imp, tot : Real;
+		PCG = 1.12; ImpG = 1.07; IVA = 1.21;
+
+	Proceso
+		Esc("Ingrese el costo de la PC");
+		Leer(PC);
+		Esc("Ingrese el costo de la impresora");
+		Leer(Imp);
+		PC := PC * PCG;
+		Imp := Imp * ImpG;
+		tot := PC + Imp;
+		tot := tot * IVA;
+		Esc("El precio total de la venta es ", tot);
+Fin_accion

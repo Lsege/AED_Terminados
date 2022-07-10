@@ -1,0 +1,22 @@
+Las raíces de una ecuación de segundo grado Ax2 + bx + C = 0 son reales si y solo si el discriminante dado por (2b - 4ac) no es negativo. Se desea leer los coeficientes e imprimir el restultado del discriminante.
+
+Accion Discriminante es
+    Ambiente
+        a, b, c : reales
+        r : real
+    Proceso
+        Escribir("Ingrese el valor de A");
+        Leer(a);
+        Escribir("Ingrese el valor de B");
+        Leer(b);
+        Escribir("Ingrese el valor de C");
+        Leer(c);
+        r := 2*b - 4*a*c;
+        Si r > 0 entonces
+            Escribir("El discriminante es positivo, las raices son reales");
+            Escribir(r);
+        Contrario
+            Escribir("El discriminante no es positivo, las raices no son reales");
+            Escribir(r);
+        FinSi
+FinAccion

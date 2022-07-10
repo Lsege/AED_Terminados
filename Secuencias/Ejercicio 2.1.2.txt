@@ -1,0 +1,19 @@
+Dada una secuencia de letras del alfabeto que finaliza con la letra "Z", contar cuantas consonantes hay en la secuencia.
+
+Accion Consonantes Es
+	Ambiente
+		Alf : Secuencia de caracteres;
+		v : caracter;
+		vocales = {"A", "E", "I", "O", "U"};
+		c : entero;
+
+	Proceso
+		c := 0; Arr(Alf);
+		Repetir
+			Avz(Alf, v);
+			Si v No en vocales entonces:
+				c := c +1;
+			FinSi
+		Hasta que v = "Z"
+		Cerrar(Alf)
+FinAccion

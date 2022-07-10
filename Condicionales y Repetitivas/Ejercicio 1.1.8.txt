@@ -1,0 +1,28 @@
+Escriba un algoritmo que permita conocer la edad de una persona, con solo ingresar la fecha de nacimiento y la fecha actual, ambas en el formato: DIA, MES, AÑO
+
+Accion Edad es
+	Ambiente
+		dia_act, mes_act, anio_act : entero
+		dia_nac, mes_nac, anio_nac : entero
+		edad : entero
+
+	Proceso
+		Esc("Ingrese su nacimiento con el formato DIA/MES/AÑO");
+		Leer(dia_nac); Leer(mes_nac); Leer(anio_nac);
+		Esc("Ingrese la fecha de hoy con el formato DIA/MES/AÑO");
+		Leer(dia_act); Leer(mes_act); Leer(anio_act);
+
+		si mes_act < mes_nac entonces
+			edad := anio_act - anio_nac - 1;
+		sino
+			si mes_act > mes_nac entonces
+				edad := anio_act - anio_nac;
+			sino
+				si dia_act >= dia_nac entonces
+					edad := anio_act - anio_nac;
+				sino
+					edad := anio_act - anio_nac - 1;
+				finSi
+			finSi
+		finSi
+finAccion.

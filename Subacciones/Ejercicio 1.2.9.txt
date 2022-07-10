@@ -1,0 +1,86 @@
+Desarrollar los procedimientos mostrar_0, mostrar_1, mostrar_9 que visualicen por pantalla, respectivamente, los números 0,1,...,9 en tamaño grande, tal y como se muestra a continuación:
+
+
+Accion NumerosGrandes Es
+	Ambiente
+		valor : entero
+
+		Procedimiento mostrar_0():
+			Esc("*****");
+			Esc("*   *");
+			Esc("*   *");
+			Esc("*   *");
+			Esc("*****");
+		finProcedmiento
+
+		Procedimiento mostrar_1():
+			Esc("    *");
+			Esc("    *");
+			Esc("    *");
+			Esc("    *");
+			Esc("    *");
+		FinProcedmiento
+
+		Procedimiento mostrar_2():
+			Esc("*****");
+			Esc("    *");
+			Esc("*****");
+			Esc("*    ");
+			Esc("*****");
+		FinProcedimiento
+
+		Procedimiento mostrar_3():
+			Esc("*****");
+			Esc("    *");
+			Esc("*****");
+			Esc("    *");
+			Esc("*****");
+		FinProcedimiento
+
+		Procedimiento mostrar_4():
+			Esc("*   *");
+			Esc("*   *");
+			Esc("*****");
+			Esc("    *");
+			Esc("    *");
+		FinProcedimiento
+
+		Procedimiento mostrar_5():
+			Esc("*****");
+			Esc("*    ");
+			Esc("*****");
+			Esc("    *");
+			Esc("*****");
+		FinProcedimiento
+
+		Procedimiento mostrar_6():
+			Esc("*****");
+			Esc("*    ");
+			Esc("*****");
+			Esc("*   *");
+			Esc("*****");
+		FinProcedimiento
+
+		Procedimiento mostrar_7():
+			Esc("*****");
+			Esc("    *");
+			Esc("    *");
+			Esc("    *");
+			Esc("    *");
+		FinProcedimiento
+
+		Procedimiento mostrar_8():
+			Esc("*****");
+			Esc("*   *");
+			Esc("*****");
+			Esc("*   *");
+			Esc("*****");
+		FinProcedimiento
+
+		Procedimiento mostrar_9():
+			Esc("*****");
+			Esc("*   *");
+			Esc("*****");
+			Esc("    *");
+			Esc("*****");
+		FinProcedimiento
