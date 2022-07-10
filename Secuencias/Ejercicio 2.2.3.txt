@@ -19,4 +19,4 @@ Accion Monotonia ES
 		FinMientras
 		Cerrar(sal1); Cerrar(sal2);
 		Arr(sal1); Arr(sal2);
-		Mientras NFDSal hacer
+		Mientras NFDSal1 hacer
