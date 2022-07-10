@@ -1,11 +1,15 @@
 Escribir un algoritmo que permita desglosar una secuencia de enteros que contiene monotonías crecientes (series de elementos consecutivos ordenados crecientemente; cada serie está constituida por un elemento como mínimo), en dos secuencias de salida, de tal modo que tales monotonías sean copiadas alternativamente en una de las secuencias resultado o en otra.
 
+y si te animas...: además de lo solicitado anteriormente, se pide: obtener la suma de los valores de cada secuencia y al final informar el mayor valor (de esas sumas).
+
 Accion Monotonia ES
 	Ambiente
 		Sec, sal1, sal2 : secuencia de enteros;
-		v, aux : entero;
+		v, v1, v2, aux : entero;
+		acu1, acu2, may: entero;
 
 	Proceso
+		aux:= 0; acu1 := 0; acu2 := 0; may := 0;
 		Arr(Sec); Crear(sal1); Crear(sal2); Avz(Sec, v);
 		Esc(sal1, v);
 		Mientras NFDSec hacer
@@ -17,6 +21,25 @@ Accion Monotonia ES
 				Esc(sal2, v);
 			FinSI
 		FinMientras
+
 		Cerrar(sal1); Cerrar(sal2);
 		Arr(sal1); Arr(sal2);
+		Avz(sal1, v1); Avz(sal2, v2);
+
 		Mientras NFDSal1 hacer
+			acu1 := acu1 + v1;
+			Avz(sal1, v1);
+		FinMientras
+
+		Mientras NFDSal2 hacer
+			acu2 := acu2 +v2;
+			Avz(sal2, v2);
+		FinMientras
+
+		Si acu1 > acu2 entonces
+			may := acu1;
+		Sino
+			may := acu2;
+		FinSI
+
+		Esc("El mayor de las sumas es ", may);
