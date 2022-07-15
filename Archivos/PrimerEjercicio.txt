@@ -1,0 +1,40 @@
+Accion Facultad Es
+	Ambiente
+		Fecha = Registro;
+			AA : N(4);
+			MM : 1..12;
+			DD : 1..31;
+		FinRegistro
+
+		Datos = Registro;
+			Apellido_Nombre : AN(50);
+			Carrera : AN(3);
+			Nro_Legajo : N(6);
+			FechaNac : Fecha;
+			FechaIng : Fecha;
+			DNI : N(9);
+			Sexo : AN(1);
+			FechaUE : Fecha;
+			Nota : N(2);
+		FinRegistro
+
+		Listado = Registro;
+			Nro_legajo : N(6);
+			Apelido_Nombre : AN(50);
+			Documento : N(9);
+			Carrera : AN(3);
+		FinRegistro
+
+		Archivo_Datos : Archivo de Datos; Reg_Datos : Datos;
+		Archivo_Listado : Archivo de Listado; Reg_List : Listado;
+
+	Proceso
+		ABRIR/E(Archivo_Datos); ABRIR/S(Archivo_Listado);
+		
+		Leer(Archivo_Datos, Reg_Datos);
+
+		Mientras NFD(Archivo_Datos) Hacer
+
+
+			
+

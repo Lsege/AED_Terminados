@@ -1,0 +1,22 @@
+Accion PAIS es
+	Ambiente
+		Poblacion = Registro
+			Provincia : AN(20);
+			Departamento : AN(30);
+			Ciudad : AN(20);
+			Barrio : AN(30);
+			ID_Casa : Entero;
+			Cantidad_Habitantes : Entero;
+		FinRegistro
+
+		Informacion = Registro
+			Provincia : AN(20);
+			Departamento : AN(30);
+			Cantidad_Habitantes : Entero;
+		FinRegistro
+
+		Gente : Archivo de Poblacion; Persona : Poblacion;
+		Lista : Archivo de Informacion; Reg : Informacion;
+
+		Subaccion C_Departamento ES
+			Esc("Para el Departamento ", Reg.)
